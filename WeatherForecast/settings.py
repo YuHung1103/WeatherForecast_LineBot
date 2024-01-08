@@ -13,6 +13,9 @@ https://docs.djangoproject.com/en/5.0/ref/settings/
 import os
 from pathlib import Path
 
+# 啟用APScheduler
+from WeatherForecastApp.scheduler import scheduler
+
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
@@ -28,7 +31,7 @@ SECRET_KEY = 'django-insecure-=07qrm2yfa)q2w_hc6snfc91^8un$-^lqu6sv)f5d-t^r^(qs7
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['bb70-2402-7500-579-ba89-9197-76b8-47a7-b5cb.ngrok-free.app']
+ALLOWED_HOSTS = ['2e33-2402-7500-46a-63e5-f0c1-ac61-7c77-8294.ngrok-free.app']
 
 
 # Application definition
@@ -41,7 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django_crontab',
-    'WeatherForecastApp'
+    'WeatherForecastApp.apps.WeatherforecastappConfig'
 ]
 
 MIDDLEWARE = [

@@ -118,10 +118,10 @@ def today():
 
     if start_time <= current_time <= end_time:
         # img = "https://www.cwa.gov.tw/V8/assets/img/weather_icons/weathers/svg_icon/day/"+wxi+".svg"
-        img = "https://wegotoexperiencelife.com/wp-content/uploads/2020/05/image1-6.jpeg"
+        img = "https://attach.setn.com/newsimages/2022/12/02/3945459-PH.jpg"
     else:
         # img = "https://www.cwa.gov.tw/V8/assets/img/weather_icons/weathers/svg_icon/night/"+wxi+".svg"
-        img = "https://attach.setn.com/newsimages/2022/12/02/3945459-PH.jpg"
+        img = "https://wegotoexperiencelife.com/wp-content/uploads/2020/05/image1-6.jpeg"
 
     return [img, temp, pop, wx, ci]
 

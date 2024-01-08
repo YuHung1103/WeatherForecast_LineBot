@@ -7,7 +7,7 @@ from django.views.decorators.csrf import csrf_exempt
 
 from linebot import LineBotApi, WebhookParser
 from linebot.exceptions import InvalidSignatureError, LineBotApiError
-from linebot.models import MessageEvent
+from linebot.models import MessageEvent, FlexSendMessage
 
 # 引入圖文訊息處理
 from .FlexMessage import todayMessage, weekMessage
@@ -40,10 +40,8 @@ def callback(request):
 def handle_message(event):
     if isinstance(event, MessageEvent):
         if event.message.text == "今日天氣":
-            flex_message = todayMessage(event)
-            line_bot_api.reply_message(event.reply_token, flex_message)
+            line_bot_api.reply_message(event.reply_token, todayMessage())
         elif event.message.text == "一周天氣":
-            flex_message = weekMessage(event)
-            line_bot_api.reply_message(event.reply_token, flex_message)
+            line_bot_api.reply_message(event.reply_token, weekMessage())
 
 

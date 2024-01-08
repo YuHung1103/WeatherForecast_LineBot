@@ -4,7 +4,7 @@ from linebot.models import FlexSendMessage
 # 引入爬蟲程式
 from .WeatherCrawler import today, week
 
-def todayMessage(event):
+def todayMessage():
     data = today()
     return FlexSendMessage(
         alt_text='今天天氣狀況',
@@ -13,15 +13,10 @@ def todayMessage(event):
             "size": "mega",
             "hero": {
                 "type": "image",
-                "url": "https://attach.setn.com/newsimages/2022/12/02/3945459-PH.jpg",
+                "url": data[0],
                 "size": "full",
                 "aspectRatio": "20:13",
                 "aspectMode": "cover",
-                "action": {
-                    "type": "message",
-                    "label": "action",
-                    "text": "今日天氣"
-                },
                 "margin": "none"
             },
             "body": {
@@ -114,7 +109,7 @@ def todayMessage(event):
         }
     )
     
-def weekMessage(event):
+def weekMessage():
     data = week()
     return FlexSendMessage(
         alt_text='今天天氣狀況',
