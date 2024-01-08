@@ -1,1 +1,1 @@
-web: gunicorn WeatherForecast.wsgi:application
+web: uvicorn WeatherForecast.wsgi:application
