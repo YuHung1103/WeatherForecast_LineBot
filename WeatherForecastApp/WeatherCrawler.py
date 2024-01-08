@@ -115,9 +115,9 @@ def today():
     current_time = datetime.now().time()
     start_time = datetime.strptime("04:00", "%H:%M").time()
     end_time = datetime.strptime("16:00", "%H:%M").time()
-    print("current_time:"+current_time)
-    print("start_time:"+start_time)
-    print("end_time:"+end_time)
+    print("current_time:"+str(current_time))
+    print("start_time:"+str(start_time))
+    print("end_time:"+str(end_time))
 
     if start_time <= current_time <= end_time:
         # img = "https://www.cwa.gov.tw/V8/assets/img/weather_icons/weathers/svg_icon/day/"+wxi+".svg"
