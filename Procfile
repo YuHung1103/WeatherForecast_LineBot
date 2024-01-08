@@ -1,1 +1,1 @@
-py manage.py runserver
+web: gunicorn WeatherForecast.wsgi:application
