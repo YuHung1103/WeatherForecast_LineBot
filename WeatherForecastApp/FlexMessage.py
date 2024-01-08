@@ -112,7 +112,7 @@ def todayMessage():
 def weekMessage():
     data = week()
     return FlexSendMessage(
-        alt_text='今天天氣狀況',
+        alt_text='這周天氣狀況',
         contents={
             "type": "carousel",
             "contents": [
