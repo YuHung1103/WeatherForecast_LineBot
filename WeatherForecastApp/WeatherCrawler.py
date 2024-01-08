@@ -2,6 +2,7 @@ import requests
 from bs4 import BeautifulSoup
 from datetime import datetime
 import json
+import pytz
 
 def week():
     currentDateAndTime = datetime.now()
@@ -110,9 +111,10 @@ def today():
     ci = city_data[0].get('CI')
 
     img = ""
-    current_time = currentDateAndTime.time()
+    # 取得台灣時區
+    taipei_tz = pytz.timezone('Asia/Taipei')
     # 判斷當前時間是否介於04:00到16:00之間
-    current_time = datetime.now().time()
+    current_time = datetime.now(taipei_tz).time()
     start_time = datetime.strptime("04:00", "%H:%M").time()
     end_time = datetime.strptime("16:00", "%H:%M").time()
     print("current_time:"+str(current_time))
