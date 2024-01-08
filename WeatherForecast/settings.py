@@ -31,7 +31,7 @@ SECRET_KEY = 'django-insecure-=07qrm2yfa)q2w_hc6snfc91^8un$-^lqu6sv)f5d-t^r^(qs7
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['eda0-2402-7500-46a-63e5-f0c1-ac61-7c77-8294.ngrok-free.app']
+ALLOWED_HOSTS = ['line-bot-weatherforecast.onrender.com']
 
 
 # Application definition
